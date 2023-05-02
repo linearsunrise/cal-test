@@ -1,0 +1,40 @@
+.app-layout {
+  background-color: var(--main-dark);
+  height: 100%;
+  display: flex;
+
+  &__nav {
+    width: 300px;
+    background-color: var(--main-100);
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    flex: 1
+  }
+
+  &__head {
+    height: 72px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+    &--dark { background-color: var(--main-dark); }
+    &--100 { background-color: var(--main-100); }
+    &--200 { background-color: var(--main-200); }
+    &--300 { background-color: var(--main-300); }
+    &--400 { background-color: var(--main-400); }
+  }
+
+  &__head-content {
+    flex: 1;
+    padding: 12px;
+    display: flex;
+    align-items: center;
+    color: var(--main-400);
+    font-size: 30px;
+  }
+}
