@@ -6,7 +6,6 @@ import path from "path";
 const PORT = 8080;
 const APP_TITLE = "React Test App";
 
-// https://vitejs.dev/config/
 export default defineConfig({
   preview: {
     port: PORT,
