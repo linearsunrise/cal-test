@@ -1,0 +1,61 @@
+.week-day {
+  --line: 32px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background-color: var(--main-dark);
+  border-left: 1px solid var(--main-100);
+
+  &__head {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+    background-color: var(--main-200);
+    overflow: hidden;
+  }
+
+  &__head-day {
+    color: var(--main-bright);
+    text-align: end;
+    font-size: var(--line);
+    line-height: 2em;
+    margin-right: 12px;
+    position: relative;
+    z-index: 0;
+
+    &--today {
+      &::before {
+        --diameter: 121px;
+        z-index: -1;
+        content: '';
+        top: -10px;
+        left: -16px;
+        position: absolute;
+        height: var(--diameter);
+        width: var(--diameter);
+        border-radius: var(--diameter);
+        background-color: var(--colors-blue);
+      }
+    }
+  }
+  &__head-weekday {
+    z-index: 1;
+    display: flex;
+    color: var(--main-400);
+    text-align: end;
+    height: var(--line);
+    font-size: calc(var(--line) / 3);
+    line-height: 1em;
+    margin-right: 12px;
+  }
+
+  &__ribbon {
+    flex: 1;
+    min-height: calc(var(--line) * 24 * 2);
+    position: relative;
+  }
+}

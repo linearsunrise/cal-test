@@ -13,7 +13,7 @@
   &__container {
     display: flex;
     flex-direction: column;
-    flex: 1
+    flex: 1;
   }
 
   &__head {
@@ -36,5 +36,46 @@
     align-items: center;
     color: var(--main-400);
     font-size: 30px;
+  }
+
+  &__main {
+    display: flex;
+    flex: 1;
+    overflow: auto;
+  }
+
+  &__main-content {
+    display: flex;
+    flex: 1;
+  }
+
+  &__navigation-list {
+    flex: 1;
+    // box-sizing: border-box;
+  }
+
+  &__navigation-list-container {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    // padding: 12px;
+  }
+
+  &__navigation-list-element {
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+    color: var(--main-400);
+    max-height: 64px;
+    padding-left: 1em;
+    height: 64px;
+
+    &:visited {
+      color: var(--main-400);
+    }
+
+    &:hover {
+      background-color: #555;
+    }
   }
 }

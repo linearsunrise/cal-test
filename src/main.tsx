@@ -1,13 +1,16 @@
-import React from "react";
-import ReactDOM from "react-dom/client";
-import "./index.css";
-import App from "./App";
-import _ from "lodash";
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import './main.scss';
+import App from './App';
+import _ from 'lodash';
+import dayjs from 'dayjs';
 
-const rootElement = document.getElementById("root");
+dayjs.locale('ru')
+
+const rootElement = document.getElementById('root');
 
 if (_.isNil(rootElement)) {
-  throw new Error("No root element");
+  throw new Error('No root element');
 }
 
 const root = ReactDOM.createRoot(rootElement);

@@ -1,0 +1,27 @@
+:root {
+  --main-dark:      #222;
+  --main-100:       #333;
+  --main-200:       #666;
+  --main-300:       #999;
+  --main-400:       #ccc;
+  --main-bright:    #fff;
+
+  --colors-blue:    #5a5ad8;
+  --colors-red:     #d85a5a;
+  --colors-green:   #5ad86f;
+  --colors-yellow:  #d8d65a;
+  --colors-cyan:    #5ad0d8;
+  --colors-magenta: #d85ad2;
+}
+
+body {
+  margin: 0;
+  font-family: 'IBM Plex Mono';
+  width: 100%;
+  height: 100vh;
+}
+
+#root {
+  width: 100%;
+  height: 100vh;
+}
