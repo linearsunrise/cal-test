@@ -22,7 +22,7 @@ export default function AppLayout() {
           <Link to="/agenda" className="app-layout__navigation-list-element">
             Agenda
           </Link>
-          <SimpleCalendar></SimpleCalendar>
+          <SimpleCalendar date={{day: 4, month: 4, year: 2023}}></SimpleCalendar>
         </NavBar>
         <ContentView>
           <Outlet></Outlet>

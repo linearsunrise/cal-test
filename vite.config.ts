@@ -1,10 +1,10 @@
-import { defineConfig } from "vite";
-import react from "@vitejs/plugin-react";
-import * as html from "vite-plugin-html";
-import path from "path";
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
+import * as html from 'vite-plugin-html';
+import path from 'path';
 
 const PORT = 8080;
-const APP_TITLE = "React Test App";
+const APP_TITLE = 'React Test App';
 
 export default defineConfig({
   preview: {
@@ -20,21 +20,21 @@ export default defineConfig({
       env: {},
     },
   },
-  root: "./public/",
+  root: './public/',
   build: {
     rollupOptions: {
-      input: "./public/index.html",
+      input: './public/index.html',
     },
   },
   resolve: {
     alias: [
       {
         find: /~(.+)/,
-        replacement: path.join(process.cwd(), "node_modules/$1"),
+        replacement: path.join(process.cwd(), 'node_modules/$1'),
       },
       {
         find: /@\/(.+)/,
-        replacement: path.join(process.cwd(), "./src/$1"),
+        replacement: path.join(process.cwd(), './src/$1'),
       },
     ],
   },
@@ -42,8 +42,8 @@ export default defineConfig({
     react(),
     html.createHtmlPlugin({
       minify: true,
-      entry: "@/main.tsx",
-      template: "index.html",
+      entry: '/@/main.tsx',
+      template: 'index.html',
       inject: {
         data: {
           title: APP_TITLE,

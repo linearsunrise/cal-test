@@ -8,16 +8,15 @@ import React from 'react';
 import WeekDays from '@/components/lib/calendar/enums/WeekDays';
 import { WEEK_DAYS } from '@/components/lib/calendar/consts';
 
-
 export default function WeekDay(props: {
   children?: React.ReactNode;
-  day: WeekDays;
+  date: Date;
 }) {
   const date = dayjs(faker.date.recent()).add(
     _.random(0, 12 * 60, false),
     'minutes'
   );
-  const isToday = +props.day === 3;
+  const isToday = (date: Date) => dayjs(date).isSame(new Date(), 'date');
   return (
     <React.StrictMode>
       <div className="week-day">
@@ -25,13 +24,13 @@ export default function WeekDay(props: {
           <div
             className={StyleUtils.getStyleString([
               'week-day__head-day',
-              isToday && 'week-day__head-day--today',
+              isToday(props.date) && 'week-day__head-day--today',
             ])}
           >
-            {props.day?.toString().padStart(2, '0')}
+            {dayjs(props.date).format('DD').padStart(2, '0')}
           </div>
           <div className="week-day__head-weekday">
-            {props.day ? WEEK_DAYS[props.day] : ''}
+            {WEEK_DAYS[((dayjs(props.date).day()) % 7) as WeekDays]}
           </div>
         </div>
         <div className="week-day__ribbon">

@@ -4,8 +4,10 @@ import './main.scss';
 import App from './App';
 import _ from 'lodash';
 import dayjs from 'dayjs';
+import weekOfYear from 'dayjs/plugin/weekOfYear'
 
 dayjs.locale('ru')
+dayjs.extend(weekOfYear)
 
 const rootElement = document.getElementById('root');
 

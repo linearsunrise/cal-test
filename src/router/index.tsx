@@ -10,7 +10,7 @@ import React from 'react';
 export const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<AppLayout />}>
-      <Route path="week" element={<WeekLayout />}></Route>
+      <Route index path="week/:year/:week" element={<WeekLayout />}></Route>
     </Route>
   )
 );
